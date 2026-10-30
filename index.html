@@ -1,97 +1,1188 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Lavish Fargose — Portfolio</title>
-    <link rel="stylesheet" href="style.css" />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300&family=Inter:wght@300;400;500&display=swap"
-      rel="stylesheet"
-    />
-  </head>
-  <body>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Lavish Fargose — Personal Portfolio. An art-directed Japanese garden experience at dusk." />
+  <title>Lavish Fargose — Portfolio</title>
 
-    <!-- ══════════════════════ PAGE 1 — HERO ══════════════════════ -->
-    <section class="page page-hero">
+  <!-- Typography: Shippori Mincho for serene Japanese-inspired serif headings, Plus Jakarta Sans for clean readability -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;700&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&family=Shippori+Mincho:wght@400;600;700&display=swap" rel="stylesheet" />
 
-      <!-- LEFT — Introduction -->
-      <div class="hero-left">
-        <span class="label">Portfolio</span>
-        <h1 class="hero-title">My<br />Portfolio</h1>
-        <div class="divider"></div>
-        <div class="intro-block">
-          <p class="intro-line"><span class="intro-key">Name</span><span class="intro-val">Lavish Fargose</span></p>
-          <p class="intro-line"><span class="intro-key">College</span><span class="intro-val">Your College Name</span></p>
-          <p class="intro-line"><span class="intro-key">Degree</span><span class="intro-val">B.Tech / B.E.</span></p>
-          <p class="intro-line"><span class="intro-key">Year</span><span class="intro-val">First Year</span></p>
-          <p class="intro-line"><span class="intro-key">Branch</span><span class="intro-val">Your Branch</span></p>
-        </div>
-        <p class="tagline">
-          Aspiring developer &amp; curious mind — building one project at a time.
-        </p>
-        <a href="#page2" class="cta-btn">Explore ↓</a>
-      </div>
+  <!-- Main Stylesheet -->
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body class="intro-active">
 
-      <!-- RIGHT — Photo frame -->
-      <div class="hero-right">
-        <div class="arch-wrapper">
-          <div class="arch-frame">
-            <img src="photo.jpeg" alt="Lavish Fargose" class="hero-photo" />
+  <!-- Accessible Skip Link -->
+  <a href="#main-content" class="skip-link">Skip to main content</a>
+
+  <!-- ═════════════════════════════════════════════════════════════════
+       1. GATE OPENING INTRO (First Visit Scene)
+       Full-screen cinematic traditional Japanese gates at dusk.
+       Opens with a sliding shoji/gate motion to reveal the garden.
+       ═════════════════════════════════════════════════════════════════ -->
+  <aside id="gate-intro" class="gate-intro" aria-label="Garden Gate Welcome Experience">
+    
+    <!-- Atmospheric dusk background behind gates -->
+    <div class="intro-backdrop" aria-hidden="true">
+      <div class="intro-sky"></div>
+      <div class="intro-moon"></div>
+      <div class="intro-mountains"></div>
+      <div class="intro-pagoda-silhouette"></div>
+      <div class="intro-lantern-glow"></div>
+    </div>
+
+    <!-- Skip Intro Button (always visible and keyboard accessible) -->
+    <button type="button" id="skip-intro-btn" class="skip-intro-btn" aria-label="Skip introduction animation">
+      <span>Skip Intro</span>
+      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+        <polygon points="5 4 15 12 5 20 5 4"></polygon>
+        <line x1="19" y1="5" x2="19" y2="19"></line>
+      </svg>
+    </button>
+
+    <!-- The Two Japanese Gate Doors -->
+    <div class="gate-doors-container" aria-hidden="true">
+      <!-- Left Gate Door -->
+      <div class="gate-panel gate-panel-left" id="gate-door-left">
+        <div class="gate-wood-frame">
+          <div class="gate-lattice">
+            <!-- Shoji Paper Panes -->
+            <div class="shoji-grid">
+              <span class="shoji-cell"></span><span class="shoji-cell"></span><span class="shoji-cell"></span>
+              <span class="shoji-cell"></span><span class="shoji-cell"></span><span class="shoji-cell"></span>
+              <span class="shoji-cell"></span><span class="shoji-cell"></span><span class="shoji-cell"></span>
+              <span class="shoji-cell"></span><span class="shoji-cell"></span><span class="shoji-cell"></span>
+            </div>
           </div>
-          <p class="photo-name">LAVISH FARGOSE</p>
-          <div class="photo-name-line"></div>
+          <!-- Traditional Bronze Studs & Handle Plate -->
+          <div class="gate-fittings-left">
+            <div class="gate-boss"></div>
+            <div class="gate-boss"></div>
+            <div class="gate-handle-plate">
+              <div class="gate-ring-handle"></div>
+            </div>
+            <div class="gate-boss"></div>
+            <div class="gate-boss"></div>
+          </div>
         </div>
       </div>
 
+      <!-- Right Gate Door -->
+      <div class="gate-panel gate-panel-right" id="gate-door-right">
+        <div class="gate-wood-frame">
+          <div class="gate-lattice">
+            <!-- Shoji Paper Panes -->
+            <div class="shoji-grid">
+              <span class="shoji-cell"></span><span class="shoji-cell"></span><span class="shoji-cell"></span>
+              <span class="shoji-cell"></span><span class="shoji-cell"></span><span class="shoji-cell"></span>
+              <span class="shoji-cell"></span><span class="shoji-cell"></span><span class="shoji-cell"></span>
+              <span class="shoji-cell"></span><span class="shoji-cell"></span><span class="shoji-cell"></span>
+            </div>
+          </div>
+          <!-- Traditional Bronze Studs & Handle Plate -->
+          <div class="gate-fittings-right">
+            <div class="gate-boss"></div>
+            <div class="gate-boss"></div>
+            <div class="gate-handle-plate">
+              <div class="gate-ring-handle"></div>
+            </div>
+            <div class="gate-boss"></div>
+            <div class="gate-boss"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Torii / Temple Header Beam -->
+    <div class="gate-arch-lintel" aria-hidden="true">
+      <div class="lintel-top-curve"></div>
+      <div class="lintel-sub-beam"></div>
+    </div>
+
+    <!-- Foreground Intro Invitation Plaque & Bamboo Button -->
+    <div class="intro-dialog-card" id="intro-dialog">
+      <div class="intro-crest" aria-hidden="true">
+        <!-- Stylized Sakura / Garden Crest -->
+        <svg width="44" height="44" viewBox="0 0 100 100" fill="none">
+          <circle cx="50" cy="50" r="44" stroke="#c5a059" stroke-width="2" stroke-dasharray="4 2"/>
+          <circle cx="50" cy="50" r="38" stroke="#8f1d22" stroke-width="1.5"/>
+          <path d="M50 22 C53 35 65 38 65 50 C65 62 53 65 50 78 C47 65 35 62 35 50 C35 38 47 35 50 22 Z" fill="#c53d34" opacity="0.85"/>
+          <path d="M22 50 C35 53 38 65 50 65 C62 65 65 53 78 50 C65 47 62 35 50 35 C38 35 35 47 22 50 Z" fill="#d4af37" opacity="0.85"/>
+          <circle cx="50" cy="50" r="7" fill="#fffdfa"/>
+        </svg>
+      </div>
+
+      <p class="intro-subtitle">A Dusk Journey into the Garden</p>
+      <h1 class="intro-name">Lavish Fargose</h1>
+      <p class="intro-age-badge"><span class="badge-dot"></span>Personal Portfolio · Age 18</p>
+
+      <button type="button" id="enter-garden-btn" class="bamboo-btn bamboo-btn-primary intro-enter-btn" aria-label="Open gates and enter the portfolio website">
+        <span class="bamboo-btn-wood">
+          <span class="bamboo-btn-node bamboo-node-left"></span>
+          <span class="bamboo-btn-text">Enter the Portfolio</span>
+          <span class="bamboo-btn-slash" aria-hidden="true"></span>
+          <span class="bamboo-btn-node bamboo-node-right"></span>
+        </span>
+      </button>
+
+      <p class="intro-hint">Click or press Enter to slide open the gates</p>
+    </div>
+  </aside>
+
+
+  <!-- ═════════════════════════════════════════════════════════════════
+       2. SAKURA PETALS CANVAS
+       Lightweight particle layer rendering drifting blossom petals.
+       ═════════════════════════════════════════════════════════════════ -->
+  <canvas id="sakura-canvas" class="sakura-canvas" aria-hidden="true"></canvas>
+
+
+  <!-- ═════════════════════════════════════════════════════════════════
+       3. CINEMATIC JAPANESE GARDEN DUSK ENVIRONMENT
+       Multi-layered SVG illustration providing depth and tranquility.
+       ═════════════════════════════════════════════════════════════════ -->
+  <div class="garden-scenery" aria-hidden="true">
+    
+    <!-- Layer 1: Dusk Sky with Moon & Clouds -->
+    <div class="garden-layer layer-sky">
+      <div class="dusk-sky-gradient"></div>
+      <div class="dusk-moon"></div>
+      <div class="dusk-mist"></div>
+    </div>
+
+    <!-- Layer 2: Distant Mountains & Pagoda Silhouette -->
+    <div class="garden-layer layer-distant">
+      <svg class="distant-landscape-svg" viewBox="0 0 1440 400" preserveAspectRatio="none" fill="none">
+        <!-- Distant Ridge -->
+        <path d="M0 320 Q280 210 600 290 T1200 240 Q1340 280 1440 310 L1440 400 L0 400 Z" fill="#141824" opacity="0.6"/>
+        <path d="M0 345 Q360 270 820 330 Q1180 290 1440 340 L1440 400 L0 400 Z" fill="#10131d" opacity="0.8"/>
+      </svg>
+    </div>
+
+    <!-- Layer 3: Teahouse, Torii & Garden Bridge Silhouettes -->
+    <div class="garden-layer layer-midground">
+      <div class="teahouse-container">
+        <!-- Traditional Japanese Teahouse Silhouette with glowing shoji windows -->
+        <svg class="teahouse-svg" viewBox="0 0 400 300" fill="none">
+          <!-- House Roof Curves -->
+          <path d="M40 180 Q200 130 360 180 L380 195 Q200 150 20 195 Z" fill="#1b1c24"/>
+          <path d="M80 120 Q200 80 320 120 L335 132 Q200 95 65 132 Z" fill="#15161d"/>
+          <!-- Ridge ornament (Shibi) -->
+          <path d="M195 75 L205 75 L202 85 L198 85 Z" fill="#c5a059"/>
+          <!-- Walls & Posts -->
+          <rect x="70" y="190" width="260" height="90" fill="#161821"/>
+          <!-- Glowing Shoji Windows -->
+          <rect x="95" y="200" width="55" height="60" rx="3" fill="#ffc36e" opacity="0.85" filter="drop-shadow(0 0 10px rgba(255,195,110,0.7))"/>
+          <line x1="122" y1="200" x2="122" y2="260" stroke="#2b2318" stroke-width="2"/>
+          <line x1="95" y1="230" x2="150" y2="230" stroke="#2b2318" stroke-width="2"/>
+          <rect x="175" y="205" width="50" height="55" rx="3" fill="#ffb454" opacity="0.75" filter="drop-shadow(0 0 8px rgba(255,180,84,0.6))"/>
+          <line x1="200" y1="205" x2="200" y2="260" stroke="#2b2318" stroke-width="2"/>
+          <rect x="250" y="200" width="55" height="60" rx="3" fill="#ffc36e" opacity="0.85" filter="drop-shadow(0 0 10px rgba(255,195,110,0.7))"/>
+          <line x1="277" y1="200" x2="277" y2="260" stroke="#2b2318" stroke-width="2"/>
+          <line x1="250" y1="230" x2="305" y2="230" stroke="#2b2318" stroke-width="2"/>
+          <!-- Teahouse Stilt / Base Deck -->
+          <rect x="50" y="278" width="300" height="8" fill="#0d0e13"/>
+        </svg>
+
+        <!-- Glowing Garden Stone Lantern (Ishidōrō) -->
+        <div class="stone-lantern">
+          <div class="lantern-flame"></div>
+          <svg class="lantern-svg" viewBox="0 0 80 120" fill="none">
+            <!-- Roof / Kasa -->
+            <path d="M5 45 Q40 25 75 45 L70 52 Q40 38 10 52 Z" fill="#1c1f26"/>
+            <circle cx="40" cy="24" r="6" fill="#1c1f26"/>
+            <!-- Light Chamber / Hibukuro -->
+            <rect x="25" y="52" width="30" height="26" rx="2" fill="#ffbc5d" opacity="0.9" filter="drop-shadow(0 0 14px rgba(255,188,93,0.85))"/>
+            <line x1="33" y1="52" x2="33" y2="78" stroke="#222"/>
+            <line x1="47" y1="52" x2="47" y2="78" stroke="#222"/>
+            <!-- Base / Chukodai -->
+            <path d="M20 78 L60 78 L52 86 L28 86 Z" fill="#191b22"/>
+            <rect x="34" y="86" width="12" height="22" fill="#15171d"/>
+            <rect x="18" y="108" width="44" height="10" rx="3" fill="#13141a"/>
+          </svg>
+        </div>
+      </div>
+
+      <!-- Graceful Arched Wooden Bridge Silhouette across the garden water -->
+      <div class="garden-bridge">
+        <svg viewBox="0 0 500 120" fill="none" preserveAspectRatio="none">
+          <path d="M0 110 Q250 25 500 110 L495 118 Q250 36 5 118 Z" fill="#4d1a1b"/>
+          <!-- Bridge Railing Posts -->
+          <path d="M50 90 L50 114 M120 68 L120 102 M200 48 L200 90 M250 42 L250 87 M300 48 L300 90 M380 68 L380 102 M450 90 L450 114" stroke="#8f1d22" stroke-width="4"/>
+          <!-- Bridge Deck -->
+          <path d="M0 115 Q250 38 500 115" stroke="#331415" stroke-width="8"/>
+        </svg>
+      </div>
+    </div>
+
+    <!-- Layer 4: Garden Pond with subtle water ripples and reflections -->
+    <div class="garden-layer layer-water">
+      <div class="water-sheen"></div>
+      <div class="water-ripple ripple-1"></div>
+      <div class="water-ripple ripple-2"></div>
+    </div>
+
+    <!-- Layer 5: Foreground Silhouette Branches (Cherry blossom & Pine Framing) -->
+    <div class="garden-layer layer-foreground-branches">
+      <div class="branch-top-left" aria-hidden="true">
+        <svg viewBox="0 0 320 220" fill="none">
+          <path d="M-20 -20 Q80 40 180 30 Q240 25 310 90 Q220 70 140 100 Q60 120 -20 110 Z" fill="#0d0e14"/>
+          <circle cx="160" cy="35" r="7" fill="#f8c7d8" opacity="0.8"/>
+          <circle cx="195" cy="50" r="9" fill="#f3a6bf" opacity="0.85"/>
+          <circle cx="230" cy="40" r="6" fill="#f8c7d8" opacity="0.75"/>
+          <circle cx="270" cy="75" r="8" fill="#f3a6bf" opacity="0.9"/>
+          <circle cx="295" cy="95" r="7" fill="#f8c7d8" opacity="0.8"/>
+          <circle cx="140" cy="95" r="8" fill="#f3a6bf" opacity="0.8"/>
+          <circle cx="95" cy="115" r="7" fill="#f8c7d8" opacity="0.85"/>
+        </svg>
+      </div>
+
+      <div class="branch-top-right" aria-hidden="true">
+        <svg viewBox="0 0 300 200" fill="none">
+          <path d="M320 -20 Q220 50 140 40 Q80 35 10 110 Q90 80 180 110 Q250 130 320 100 Z" fill="#0d0e14"/>
+          <circle cx="150" cy="45" r="7" fill="#f8c7d8" opacity="0.8"/>
+          <circle cx="110" cy="55" r="8" fill="#f3a6bf" opacity="0.85"/>
+          <circle cx="75" cy="50" r="6" fill="#f8c7d8" opacity="0.75"/>
+          <circle cx="40" cy="90" r="8" fill="#f3a6bf" opacity="0.85"/>
+          <circle cx="20" cy="115" r="7" fill="#f8c7d8" opacity="0.8"/>
+          <circle cx="170" cy="105" r="8" fill="#f3a6bf" opacity="0.8"/>
+        </svg>
+      </div>
+    </div>
+  </div>
+
+
+  <!-- ═════════════════════════════════════════════════════════════════
+       4. FLOATING BAMBOO NAVIGATION BAR
+       Compact bamboo-plate navigation floating near top of screen.
+       Smooth scrolling, active section tracking, mobile accessible.
+       ═════════════════════════════════════════════════════════════════ -->
+  <header class="site-header" id="site-header">
+    <div class="nav-wrapper">
+      
+      <!-- Brand Seal / Monogram -->
+      <a href="#hero" class="nav-monogram" aria-label="Lavish Fargose — Return to top">
+        <span class="monogram-seal">
+          <svg width="26" height="26" viewBox="0 0 100 100" fill="none" aria-hidden="true">
+            <rect x="8" y="8" width="84" height="84" rx="16" fill="#8f1d22" stroke="#d4af37" stroke-width="4"/>
+            <path d="M30 28 L30 72 L55 72 M58 28 L82 28 M58 28 L58 72 M58 50 L76 50" stroke="#fffdfa" stroke-width="6.5" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+          <span class="monogram-text">LF</span>
+        </span>
+      </a>
+
+      <!-- Desktop Floating Bamboo Navigation Plates -->
+      <nav class="bamboo-nav-desktop" id="bamboo-nav" aria-label="Main Navigation">
+        <ul class="nav-plate-list" role="menubar">
+          <li role="none">
+            <a href="#hero" class="nav-bamboo-plate active" role="menuitem" data-section="hero">
+              <span class="plate-inner">
+                <span class="plate-text">Home</span>
+              </span>
+            </a>
+          </li>
+          <li role="none">
+            <a href="#about" class="nav-bamboo-plate" role="menuitem" data-section="about">
+              <span class="plate-inner">
+                <span class="plate-text">About</span>
+              </span>
+            </a>
+          </li>
+          <li role="none">
+            <a href="#skills" class="nav-bamboo-plate" role="menuitem" data-section="skills">
+              <span class="plate-inner">
+                <span class="plate-text">Skills</span>
+              </span>
+            </a>
+          </li>
+          <li role="none">
+            <a href="#projects" class="nav-bamboo-plate" role="menuitem" data-section="projects">
+              <span class="plate-inner">
+                <span class="plate-text">Projects</span>
+              </span>
+            </a>
+          </li>
+          <li role="none">
+            <a href="#contact" class="nav-bamboo-plate" role="menuitem" data-section="contact">
+              <span class="plate-inner">
+                <span class="plate-text">Contact</span>
+              </span>
+            </a>
+          </li>
+        </ul>
+      </nav>
+
+      <!-- Utility Actions: Replay Intro & Mobile Hamburger Button -->
+      <div class="nav-utilities">
+        <button type="button" id="replay-intro-btn" class="util-btn" title="Replay Gate Opening Intro" aria-label="Replay Gate Opening Intro">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <path d="M1 4v6h6"></path>
+            <path d="M3.51 15a9 9 0 1 0 2.13-9.36L1 10"></path>
+          </svg>
+          <span class="util-btn-text">Replay Intro</span>
+        </button>
+
+        <button type="button" id="mobile-menu-toggle" class="bamboo-btn bamboo-btn-mobile-toggle" aria-expanded="false" aria-controls="mobile-nav-drawer" aria-label="Toggle navigation menu">
+          <span class="bamboo-btn-wood">
+            <span class="hamburger-box" aria-hidden="true">
+              <span class="hamburger-inner"></span>
+            </span>
+            <span class="mobile-menu-label">Menu</span>
+          </span>
+        </button>
+      </div>
+
+    </div>
+
+    <!-- Mobile Drawer Navigation -->
+    <div id="mobile-nav-drawer" class="mobile-nav-drawer" aria-hidden="true">
+      <ul class="mobile-nav-list">
+        <li><a href="#hero" class="mobile-nav-link" data-section="hero">Home</a></li>
+        <li><a href="#about" class="mobile-nav-link" data-section="about">About</a></li>
+        <li><a href="#skills" class="mobile-nav-link" data-section="skills">Skills</a></li>
+        <li><a href="#projects" class="mobile-nav-link" data-section="projects">Projects</a></li>
+        <li><a href="#contact" class="mobile-nav-link" data-section="contact">Contact</a></li>
+      </ul>
+      <div class="mobile-drawer-footer">
+        <button type="button" id="mobile-replay-btn" class="bamboo-btn bamboo-btn-sm">
+          <span class="bamboo-btn-wood">
+            <span class="bamboo-btn-text">Replay Gate Intro</span>
+          </span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+
+  <!-- ═════════════════════════════════════════════════════════════════
+       MAIN CONTENT CONTAINER
+       Accessible landmark with high-contrast, parchment-styled panels.
+       ═════════════════════════════════════════════════════════════════ -->
+  <main id="main-content" class="site-main">
+
+    <!-- ─────────────────────────────────────────────────────────────
+         SECTION 1: HERO SECTION
+         Welcoming garden pavilion with animated portrait & CTA buttons.
+         ───────────────────────────────────────────────────────────── -->
+    <section id="hero" class="section section-hero" aria-labelledby="hero-title">
+      <div class="section-container hero-container">
+        
+        <!-- Hero Text & Presentation -->
+        <div class="hero-content">
+          
+          <div class="zen-badge">
+            <span class="zen-badge-icon" aria-hidden="true">❖</span>
+            <span class="zen-badge-text">Personal Portfolio · Age 18</span>
+          </div>
+
+          <h1 id="hero-title" class="hero-title">
+            <span class="hero-family-name">Lavish</span>
+            <span class="hero-given-name">Fargose</span>
+          </h1>
+
+          <div class="hero-decorative-line" aria-hidden="true">
+            <span class="line-segment"></span>
+            <span class="line-knot">◆</span>
+            <span class="line-segment"></span>
+          </div>
+
+          <!-- Short editable introduction placeholder as requested -->
+          <div class="hero-intro-box">
+            <p class="hero-lead-text">
+              <span class="editable-placeholder" data-field="hero-introduction">
+                [Add your introduction: e.g. A passionate 18-year-old developer and creator crafting thoughtful, elegant digital experiences inspired by simplicity and balance.]
+              </span>
+            </p>
+          </div>
+
+          <!-- Call to Action Bamboo Buttons -->
+          <div class="hero-actions">
+            
+            <a href="#projects" class="bamboo-btn bamboo-btn-primary" aria-label="Jump to Projects Section">
+              <span class="bamboo-btn-wood">
+                <span class="bamboo-btn-node bamboo-node-left"></span>
+                <span class="bamboo-btn-text">View Projects</span>
+                <span class="bamboo-btn-slash" aria-hidden="true"></span>
+                <span class="bamboo-btn-node bamboo-node-right"></span>
+              </span>
+            </a>
+
+            <a href="#about" class="bamboo-btn bamboo-btn-secondary" aria-label="Jump to About Section">
+              <span class="bamboo-btn-wood">
+                <span class="bamboo-btn-node bamboo-node-left"></span>
+                <span class="bamboo-btn-text">About Me</span>
+                <span class="bamboo-btn-slash" aria-hidden="true"></span>
+                <span class="bamboo-btn-node bamboo-node-right"></span>
+              </span>
+            </a>
+
+          </div>
+
+          <!-- Scroll Hint -->
+          <div class="scroll-hint">
+            <a href="#about" class="scroll-hint-link" aria-label="Scroll down to About section">
+              <span class="scroll-lantern-icon" aria-hidden="true">
+                <svg width="22" height="34" viewBox="0 0 24 38" fill="none">
+                  <path d="M12 2 L12 6" stroke="#c5a059" stroke-width="2"/>
+                  <rect x="5" y="6" width="14" height="20" rx="3" fill="#ffc87a" opacity="0.85" stroke="#3d2b1f" stroke-width="1.5"/>
+                  <line x1="12" y1="6" x2="12" y2="26" stroke="#8f1d22" stroke-width="1.5"/>
+                  <path d="M8 26 L12 34 L16 26" fill="#8f1d22"/>
+                </svg>
+              </span>
+              <span class="scroll-hint-text">Journey into the garden</span>
+              <span class="scroll-hint-arrow" aria-hidden="true">↓</span>
+            </a>
+          </div>
+
+        </div>
+
+        <!-- Hero Right: Animated Portrait Frame & Artistic Placeholder -->
+        <div class="hero-portrait-column">
+          <div class="portrait-scroll-outer">
+            
+            <!-- Traditional Scroll Mount Rods -->
+            <div class="scroll-mount-rod top-rod" aria-hidden="true">
+              <span class="rod-finial finial-left"></span>
+              <span class="rod-shaft"></span>
+              <span class="rod-finial finial-right"></span>
+            </div>
+
+            <!-- The Main Portrait Window -->
+            <div class="portrait-display-frame" id="portrait-frame">
+              
+              <!-- 
+                =======================================================
+                PORTRAIT REPLACEMENT GUIDE:
+                =======================================================
+                By default, this frame displays a serene, animated
+                Japanese-ink artistic portrait placeholder.
+                
+                To use your own real photo (such as photo.jpeg):
+                1. Simply uncomment the <img ...> tag below.
+                2. Set class="portrait-img active" and remove or hide
+                   the .portrait-artistic-placeholder div.
+                =======================================================
+              -->
+
+              <!-- Optional Real Photo (Uncomment & use when ready) -->
+              <img 
+                src="photo.jpeg" 
+                alt="Portrait of Lavish Fargose" 
+                class="portrait-real-image" 
+                id="user-portrait-img"
+                loading="eager"
+                style="display: none;" 
+              />
+
+              <!-- Default Art-Directed Animated Portrait Placeholder -->
+              <div class="portrait-artistic-placeholder" id="portrait-placeholder" aria-label="Animated artistic portrait placeholder for Lavish Fargose">
+                
+                <!-- Gentle Zen Halo / Sunlight Aura behind silhouette -->
+                <div class="zen-halo" aria-hidden="true"></div>
+
+                <!-- Ink Silhouette of Creator -->
+                <svg class="portrait-silhouette-svg" viewBox="0 0 280 340" fill="none" aria-hidden="true">
+                  <defs>
+                    <radialGradient id="inkGlow" cx="50%" cy="40%" r="50%">
+                      <stop offset="0%" stop-color="#fdfbf7" stop-opacity="0.9"/>
+                      <stop offset="70%" stop-color="#faeee0" stop-opacity="0.5"/>
+                      <stop offset="100%" stop-color="#ebd9c3" stop-opacity="0.1"/>
+                    </radialGradient>
+                    <linearGradient id="kimonoGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+                      <stop offset="0%" stop-color="#2a2e3d"/>
+                      <stop offset="50%" stop-color="#181a24"/>
+                      <stop offset="100%" stop-color="#101118"/>
+                    </linearGradient>
+                  </defs>
+
+                  <!-- Paper background within frame -->
+                  <rect width="280" height="340" fill="url(#inkGlow)"/>
+
+                  <!-- Torii / Mountain Watermark in background -->
+                  <path d="M70 120 L210 120 M85 105 L195 105 M100 105 L100 160 M180 105 L180 160" stroke="#c5a059" stroke-width="1.5" opacity="0.3"/>
+                  
+                  <!-- Silhouette: Shoulders & Collared Haori / Attire -->
+                  <path d="M30 340 C30 270 70 230 110 215 L140 245 L170 215 C210 230 250 270 250 340 Z" fill="url(#kimonoGrad)"/>
+                  
+                  <!-- Haori Collar Lapels -->
+                  <path d="M110 215 L140 285 L125 340" stroke="#c5a059" stroke-width="2" opacity="0.7"/>
+                  <path d="M170 215 L140 285 L155 340" stroke="#8f1d22" stroke-width="2" opacity="0.7"/>
+
+                  <!-- Neck -->
+                  <path d="M125 185 L125 220 L155 220 L155 185 Z" fill="#d9c2a7"/>
+
+                  <!-- Head & Hair Silhouette -->
+                  <ellipse cx="140" cy="155" rx="36" ry="46" fill="#e8d3bd"/>
+                  
+                  <!-- Modern Styled Hair silhouette -->
+                  <path d="M96 150 C96 100 125 90 145 90 C175 90 188 110 186 145 C186 155 182 165 178 165 C174 150 172 135 160 125 C145 115 120 120 115 145 C108 140 100 145 96 150 Z" fill="#181a22"/>
+                  
+                  <!-- Discreet artistic facial contour -->
+                  <path d="M136 152 Q142 162 144 165" stroke="#9e7b58" stroke-width="1.5" stroke-linecap="round"/>
+                  <path d="M132 176 Q140 180 148 176" stroke="#9e7b58" stroke-width="1.5" stroke-linecap="round"/>
+
+                  <!-- Soft animated floating ink petal in frame -->
+                  <circle cx="210" cy="80" r="5" fill="#f3a6bf" opacity="0.8"/>
+                  <circle cx="65" cy="190" r="4" fill="#f8c7d8" opacity="0.7"/>
+                </svg>
+
+                <!-- Floating Petal Accent Over Portrait -->
+                <div class="portrait-floating-petal" aria-hidden="true"></div>
+
+                <!-- Portrait Label & Quick Switch Control -->
+                <div class="portrait-caption">
+                  <span class="portrait-caption-tag">[Portrait Placeholder]</span>
+                  <span class="portrait-caption-note">Lavish Fargose</span>
+                </div>
+              </div>
+
+              <!-- Quick Switch Tooltip / Button for user convenience -->
+              <div class="portrait-switch-banner">
+                <button type="button" id="toggle-portrait-view-btn" class="portrait-toggle-btn" title="Toggle between artistic placeholder and photo.jpeg">
+                  <span>Switch Image / Photo</span>
+                </button>
+              </div>
+
+            </div>
+
+            <!-- Bottom Scroll Mount Rod -->
+            <div class="scroll-mount-rod bottom-rod" aria-hidden="true">
+              <span class="rod-finial finial-left"></span>
+              <span class="rod-shaft"></span>
+              <span class="rod-finial finial-right"></span>
+            </div>
+
+          </div>
+        </div>
+
+      </div>
     </section>
 
-    <!-- ══════════════════════ PAGE 2 — SKILLS & ACHIEVEMENTS ══════════════════════ -->
-    <section class="page page-cards" id="page2">
 
-      <div class="cards-header">
-        <span class="label">About Me</span>
-        <h2 class="cards-title">What I Bring to the Table</h2>
-      </div>
-
-      <div class="cards-grid">
-
-        <!-- SKILLS CARD -->
-        <div class="card card-skills">
-          <div class="card-icon">✦</div>
-          <h3 class="card-heading">SKILLS</h3>
-          <ul class="card-list">
-            <li><span class="bullet">—</span>HTML &amp; CSS</li>
-            <li><span class="bullet">—</span>Python (Basics)</li>
-            <li><span class="bullet">—</span>Problem Solving</li>
-            <li><span class="bullet">—</span>Team Collaboration</li>
-            <li><span class="bullet">—</span>Logical Thinking</li>
-            <li><span class="bullet">—</span>Microsoft Office Suite</li>
-          </ul>
+    <!-- ─────────────────────────────────────────────────────────────
+         SECTION 2: ABOUT SECTION
+         Tactile rice-paper scroll card featuring verified facts and
+         clearly labeled, editable placeholders.
+         ───────────────────────────────────────────────────────────── -->
+    <section id="about" class="section section-about" aria-labelledby="about-heading">
+      <div class="section-container">
+        
+        <!-- Section Header with Torii / Japanese Woodblock Motif -->
+        <div class="section-title-wrapper">
+          <div class="title-emblem" aria-hidden="true">
+            <span class="title-line"></span>
+            <span class="title-kanji-seal">庭</span>
+            <span class="title-line"></span>
+          </div>
+          <h2 id="about-heading" class="section-heading">About Me</h2>
+          <p class="section-kicker">Honoring Simplicity, Curiosity, &amp; Craft</p>
         </div>
 
-        <!-- ACHIEVEMENTS CARD -->
-        <div class="card card-achievements">
-          <div class="card-icon">★</div>
-          <h3 class="card-heading">ACHIEVEMENTS</h3>
-          <ul class="card-list">
-            <li><span class="bullet">—</span>Student of the Month</li>
-            <li><span class="bullet">—</span>Hackathon Participant</li>
-            <li><span class="bullet">—</span>Dean's List — Semester 1</li>
-            <li><span class="bullet">—</span>Coding Club Member</li>
-            <li><span class="bullet">—</span>Volunteer — College Fest</li>
-            <li><span class="bullet">—</span>Certificate in Python Basics</li>
-          </ul>
+        <!-- The About Scroll Card (High Contrast Rice-Paper Parchment) -->
+        <div class="paper-scroll-card">
+          
+          <div class="scroll-paper-texture" aria-hidden="true"></div>
+          
+          <div class="paper-card-inner">
+            
+            <!-- Traditional Red Hanko Seal Stamp -->
+            <div class="hanko-seal" aria-hidden="true" title="Traditional Artisan Seal">
+              <span class="hanko-border">
+                <span class="hanko-text">志</span>
+              </span>
+            </div>
+
+            <!-- Verified Facts Callout -->
+            <div class="verified-facts-banner">
+              <h3 class="facts-headline">Personal Profile</h3>
+              <div class="facts-grid">
+                
+                <div class="fact-item">
+                  <span class="fact-label">Full Name</span>
+                  <span class="fact-value highlight-ink">Lavish Fargose</span>
+                </div>
+
+                <div class="fact-item">
+                  <span class="fact-label">Age</span>
+                  <span class="fact-value highlight-red">18 Years Old</span>
+                </div>
+
+                <div class="fact-item">
+                  <span class="fact-label">Status</span>
+                  <span class="fact-value editable-field" data-field="status">[Add your current status / focus, e.g. Open to collaborations]</span>
+                </div>
+
+                <div class="fact-item">
+                  <span class="fact-label">Location</span>
+                  <span class="fact-value editable-field" data-field="location">[Add your location, e.g. City, Country]</span>
+                </div>
+
+              </div>
+            </div>
+
+            <hr class="paper-divider" aria-hidden="true" />
+
+            <!-- Editable Biography Placeholder -->
+            <div class="bio-content-area">
+              <h4 class="bio-subhead">Biography &amp; Philosophy</h4>
+              
+              <div class="editable-bio-block">
+                <p class="editable-text">
+                  <span class="editable-placeholder">
+                    [Add your introduction and biography here. Share your background, your inspiration, what sparks your curiosity in technology and creativity, and what kind of projects you love bringing to life.]
+                  </span>
+                </p>
+                <p class="editable-text">
+                  <span class="editable-placeholder">
+                    [Add additional background details here: for example, your favorite technologies, current learning goals, educational milestones, or your creative philosophy.]
+                  </span>
+                </p>
+              </div>
+            </div>
+
+            <!-- Education & Interests Placeholder Strip -->
+            <div class="details-strip">
+              
+              <div class="details-column">
+                <div class="column-title">
+                  <span class="col-icon" aria-hidden="true">⛩</span>
+                  <h5>Education</h5>
+                </div>
+                <div class="editable-card-box">
+                  <p class="editable-placeholder">[Add your education details: Degree, University / School, and Year of Graduation]</p>
+                </div>
+              </div>
+
+              <div class="details-column">
+                <div class="column-title">
+                  <span class="col-icon" aria-hidden="true">🎋</span>
+                  <h5>Passions &amp; Interests</h5>
+                </div>
+                <div class="editable-card-box">
+                  <p class="editable-placeholder">[Add your interests: e.g. Web Architecture, Creative Coding, Japanese Aesthetics, Open Source]</p>
+                </div>
+              </div>
+
+            </div>
+
+            <!-- Helpful editing note for user -->
+            <div class="editor-helper-note">
+              <span class="helper-icon">ⓘ</span>
+              <span><strong>Note for Lavish:</strong> All text in brackets <code>[...]</code> is intentionally reserved for you to populate with your exact details. Open <code>index.html</code> to customize them anytime.</span>
+            </div>
+
+          </div>
         </div>
 
       </div>
-
-      <!-- Footer -->
-      <footer class="footer">
-        <p>© 2026 Lavish Fargose &nbsp;·&nbsp; Built with HTML &amp; CSS</p>
-      </footer>
-
     </section>
 
-  </body>
+
+    <!-- ─────────────────────────────────────────────────────────────
+         SECTION 3: SKILLS SECTION
+         Art-directed bamboo and washi paper skill categories with
+         clear placeholder tags for custom skills.
+         ───────────────────────────────────────────────────────────── -->
+    <section id="skills" class="section section-skills" aria-labelledby="skills-heading">
+      <div class="section-container">
+        
+        <div class="section-title-wrapper">
+          <div class="title-emblem" aria-hidden="true">
+            <span class="title-line"></span>
+            <span class="title-kanji-seal">技</span>
+            <span class="title-line"></span>
+          </div>
+          <h2 id="skills-heading" class="section-heading">Skills &amp; Expertise</h2>
+          <p class="section-kicker">Crafted Disciplines &amp; Creative Tools</p>
+        </div>
+
+        <p class="skills-disclaimer">
+          <em>The skill cards below provide an organized structure for your abilities. Each tag is a clearly labeled placeholder ready to be updated with your verified tools and languages.</em>
+        </p>
+
+        <!-- Skills Grid of 4 Reusable Cards -->
+        <div class="skills-grid">
+          
+          <!-- Category 1: Frontend & Interface Design -->
+          <article class="bamboo-card skill-card">
+            <div class="card-bamboo-rim top-rim" aria-hidden="true"></div>
+            <div class="skill-card-inner">
+              <div class="skill-category-header">
+                <div class="skill-icon-circle">
+                  <span aria-hidden="true">✿</span>
+                </div>
+                <h3 class="skill-category-title">[Frontend &amp; UI/UX]</h3>
+              </div>
+              <p class="skill-category-desc">[Add your interface development and styling strengths]</p>
+              
+              <ul class="skill-tag-list" aria-label="Frontend skills list">
+                <li class="skill-tag"><span class="tag-hash">#</span>[HTML5 &amp; Semantic Web]</li>
+                <li class="skill-tag"><span class="tag-hash">#</span>[Modern CSS &amp; Animations]</li>
+                <li class="skill-tag"><span class="tag-hash">#</span>[JavaScript ES6+]</li>
+                <li class="skill-tag"><span class="tag-hash">#</span>[Responsive Layouts]</li>
+                <li class="skill-tag"><span class="tag-hash">#</span>[Add Skill Tag]</li>
+              </ul>
+            </div>
+            <div class="card-bamboo-rim bottom-rim" aria-hidden="true"></div>
+          </article>
+
+          <!-- Category 2: Programming & Logic -->
+          <article class="bamboo-card skill-card">
+            <div class="card-bamboo-rim top-rim" aria-hidden="true"></div>
+            <div class="skill-card-inner">
+              <div class="skill-category-header">
+                <div class="skill-icon-circle">
+                  <span aria-hidden="true">⚔</span>
+                </div>
+                <h3 class="skill-category-title">[Programming &amp; Logic]</h3>
+              </div>
+              <p class="skill-category-desc">[Add your core programming languages and system design tools]</p>
+              
+              <ul class="skill-tag-list" aria-label="Programming languages and logic skills">
+                <li class="skill-tag"><span class="tag-hash">#</span>[Python / Backend]</li>
+                <li class="skill-tag"><span class="tag-hash">#</span>[Data Structures &amp; Logic]</li>
+                <li class="skill-tag"><span class="tag-hash">#</span>[Algorithm Design]</li>
+                <li class="skill-tag"><span class="tag-hash">#</span>[Problem Solving]</li>
+                <li class="skill-tag"><span class="tag-hash">#</span>[Add Skill Tag]</li>
+              </ul>
+            </div>
+            <div class="card-bamboo-rim bottom-rim" aria-hidden="true"></div>
+          </article>
+
+          <!-- Category 3: Tools & Ecosystem -->
+          <article class="bamboo-card skill-card">
+            <div class="card-bamboo-rim top-rim" aria-hidden="true"></div>
+            <div class="skill-card-inner">
+              <div class="skill-category-header">
+                <div class="skill-icon-circle">
+                  <span aria-hidden="true">🏮</span>
+                </div>
+                <h3 class="skill-category-title">[Tools &amp; Workflow]</h3>
+              </div>
+              <p class="skill-category-desc">[Add your development environments, editors, and deployment tools]</p>
+              
+              <ul class="skill-tag-list" aria-label="Tools and workflow skills">
+                <li class="skill-tag"><span class="tag-hash">#</span>[Git &amp; GitHub]</li>
+                <li class="skill-tag"><span class="tag-hash">#</span>[VS Code / IDEs]</li>
+                <li class="skill-tag"><span class="tag-hash">#</span>[Command Line / Unix]</li>
+                <li class="skill-tag"><span class="tag-hash">#</span>[Design Tools / Figma]</li>
+                <li class="skill-tag"><span class="tag-hash">#</span>[Add Skill Tag]</li>
+              </ul>
+            </div>
+            <div class="card-bamboo-rim bottom-rim" aria-hidden="true"></div>
+          </article>
+
+          <!-- Category 4: Soft Skills & Mindset -->
+          <article class="bamboo-card skill-card">
+            <div class="card-bamboo-rim top-rim" aria-hidden="true"></div>
+            <div class="skill-card-inner">
+              <div class="skill-category-header">
+                <div class="skill-icon-circle">
+                  <span aria-hidden="true">☯</span>
+                </div>
+                <h3 class="skill-category-title">[Mindset &amp; Craft]</h3>
+              </div>
+              <p class="skill-category-desc">[Add your collaborative habits and creative methodologies]</p>
+              
+              <ul class="skill-tag-list" aria-label="Mindset and creative skills">
+                <li class="skill-tag"><span class="tag-hash">#</span>[Attention to Detail]</li>
+                <li class="skill-tag"><span class="tag-hash">#</span>[Continuous Learning]</li>
+                <li class="skill-tag"><span class="tag-hash">#</span>[Creative Problem Solving]</li>
+                <li class="skill-tag"><span class="tag-hash">#</span>[Clear Communication]</li>
+                <li class="skill-tag"><span class="tag-hash">#</span>[Add Skill Tag]</li>
+              </ul>
+            </div>
+            <div class="card-bamboo-rim bottom-rim" aria-hidden="true"></div>
+          </article>
+
+        </div>
+
+      </div>
+    </section>
+
+
+    <!-- ─────────────────────────────────────────────────────────────
+         SECTION 4: PROJECTS SECTION
+         Portfolio gallery with reusable, handcrafted project cards.
+         Each card features image placeholders, descriptions, tags,
+         and accessible interactive bamboo buttons.
+         ───────────────────────────────────────────────────────────── -->
+    <section id="projects" class="section section-projects" aria-labelledby="projects-heading">
+      <div class="section-container">
+        
+        <div class="section-title-wrapper">
+          <div class="title-emblem" aria-hidden="true">
+            <span class="title-line"></span>
+            <span class="title-kanji-seal">創</span>
+            <span class="title-line"></span>
+          </div>
+          <h2 id="projects-heading" class="section-heading">Featured Projects</h2>
+          <p class="section-kicker">A Gallery of Created Works &amp; Experiments</p>
+        </div>
+
+        <p class="projects-disclaimer">
+          <em>The cards below are structured templates. Lavish, you can easily paste your real project titles, descriptions, screenshots, and live demo links into the corresponding placeholders.</em>
+        </p>
+
+        <!-- Projects Gallery Grid -->
+        <div class="projects-gallery">
+          
+          <!-- Project 1 -->
+          <article class="project-card">
+            <div class="project-media-wrapper">
+              <!-- Artistic Woodblock-style Placeholder Visual -->
+              <div class="project-placeholder-art art-waves" aria-label="Visual placeholder for Project 1">
+                <svg viewBox="0 0 400 240" fill="none" class="project-art-svg" preserveAspectRatio="xMidYMid slice">
+                  <rect width="400" height="240" fill="#1b202c"/>
+                  <!-- Stylized Garden Ripples & Sakura Motif -->
+                  <circle cx="200" cy="120" r="80" stroke="#c5a059" stroke-width="1.5" stroke-dasharray="6 4" opacity="0.4"/>
+                  <circle cx="200" cy="120" r="45" stroke="#f3a6bf" stroke-width="1.5" opacity="0.6"/>
+                  <path d="M50 180 Q120 130 200 160 T350 140" stroke="#3d5a45" stroke-width="2" fill="none" opacity="0.5"/>
+                  <text x="200" y="125" text-anchor="middle" fill="#fcfaf6" font-family="'Cinzel', serif" font-size="14" letter-spacing="2">[PROJECT PREVIEW 1]</text>
+                  <text x="200" y="150" text-anchor="middle" fill="#c5a059" font-family="'Plus Jakarta Sans', sans-serif" font-size="10">Replace with your project screenshot</text>
+                </svg>
+                <span class="media-badge">[Project 01]</span>
+              </div>
+            </div>
+
+            <div class="project-body">
+              <div class="project-meta-row">
+                <span class="project-category">[Category: Web Application]</span>
+                <span class="project-year">[2026]</span>
+              </div>
+
+              <h3 class="project-title">[Project Title: Interactive Web Experience]</h3>
+
+              <p class="project-description">
+                [Add project details: Describe what problem this project solves, how you approached the design and architecture, the unique challenges you overcame, and the technologies used.]
+              </p>
+
+              <div class="project-tags">
+                <span class="p-tag">[HTML5]</span>
+                <span class="p-tag">[CSS3]</span>
+                <span class="p-tag">[JavaScript]</span>
+                <span class="p-tag">[Responsive Design]</span>
+              </div>
+
+              <div class="project-actions">
+                <a href="#projects" class="bamboo-btn bamboo-btn-sm" aria-label="Explore Project 1 Live Demo Placeholder">
+                  <span class="bamboo-btn-wood">
+                    <span class="bamboo-btn-text">[Live Demo]</span>
+                    <span class="bamboo-btn-slash" aria-hidden="true"></span>
+                  </span>
+                </a>
+                <a href="#projects" class="bamboo-btn bamboo-btn-secondary bamboo-btn-sm" aria-label="View Project 1 Source Code Placeholder">
+                  <span class="bamboo-btn-wood">
+                    <span class="bamboo-btn-text">[Source Code]</span>
+                    <span class="bamboo-btn-slash" aria-hidden="true"></span>
+                  </span>
+                </a>
+              </div>
+            </div>
+          </article>
+
+          <!-- Project 2 -->
+          <article class="project-card">
+            <div class="project-media-wrapper">
+              <!-- Artistic Woodblock-style Placeholder Visual -->
+              <div class="project-placeholder-art art-bamboo" aria-label="Visual placeholder for Project 2">
+                <svg viewBox="0 0 400 240" fill="none" class="project-art-svg" preserveAspectRatio="xMidYMid slice">
+                  <rect width="400" height="240" fill="#18231e"/>
+                  <path d="M120 240 L120 0 M200 240 L200 0 M280 240 L280 0" stroke="#3d5a45" stroke-width="4" opacity="0.4"/>
+                  <circle cx="200" cy="120" r="50" stroke="#d4af37" stroke-width="1.5" opacity="0.5"/>
+                  <text x="200" y="125" text-anchor="middle" fill="#fcfaf6" font-family="'Cinzel', serif" font-size="14" letter-spacing="2">[PROJECT PREVIEW 2]</text>
+                  <text x="200" y="150" text-anchor="middle" fill="#c5a059" font-family="'Plus Jakarta Sans', sans-serif" font-size="10">Replace with your project screenshot</text>
+                </svg>
+                <span class="media-badge">[Project 02]</span>
+              </div>
+            </div>
+
+            <div class="project-body">
+              <div class="project-meta-row">
+                <span class="project-category">[Category: Algorithm / Software]</span>
+                <span class="project-year">[2026]</span>
+              </div>
+
+              <h3 class="project-title">[Project Title: Computational Logic Tool]</h3>
+
+              <p class="project-description">
+                [Add project details: Outline the algorithm, backend logic, or core software utility implemented here. Explain the key algorithmic insights and data structures involved.]
+              </p>
+
+              <div class="project-tags">
+                <span class="p-tag">[Python]</span>
+                <span class="p-tag">[Algorithms]</span>
+                <span class="p-tag">[Automation]</span>
+              </div>
+
+              <div class="project-actions">
+                <a href="#projects" class="bamboo-btn bamboo-btn-sm" aria-label="Explore Project 2 Live Demo Placeholder">
+                  <span class="bamboo-btn-wood">
+                    <span class="bamboo-btn-text">[Live Demo]</span>
+                    <span class="bamboo-btn-slash" aria-hidden="true"></span>
+                  </span>
+                </a>
+                <a href="#projects" class="bamboo-btn bamboo-btn-secondary bamboo-btn-sm" aria-label="View Project 2 Source Code Placeholder">
+                  <span class="bamboo-btn-wood">
+                    <span class="bamboo-btn-text">[Source Code]</span>
+                    <span class="bamboo-btn-slash" aria-hidden="true"></span>
+                  </span>
+                </a>
+              </div>
+            </div>
+          </article>
+
+          <!-- Project 3 -->
+          <article class="project-card">
+            <div class="project-media-wrapper">
+              <!-- Artistic Woodblock-style Placeholder Visual -->
+              <div class="project-placeholder-art art-lantern" aria-label="Visual placeholder for Project 3">
+                <svg viewBox="0 0 400 240" fill="none" class="project-art-svg" preserveAspectRatio="xMidYMid slice">
+                  <rect width="400" height="240" fill="#241a20"/>
+                  <circle cx="200" cy="110" r="55" fill="#ffb454" opacity="0.15" filter="drop-shadow(0 0 20px rgba(255,180,84,0.3))"/>
+                  <circle cx="200" cy="110" r="40" stroke="#c53d34" stroke-width="1.5" stroke-dasharray="3 3"/>
+                  <text x="200" y="115" text-anchor="middle" fill="#fcfaf6" font-family="'Cinzel', serif" font-size="14" letter-spacing="2">[PROJECT PREVIEW 3]</text>
+                  <text x="200" y="140" text-anchor="middle" fill="#c5a059" font-family="'Plus Jakarta Sans', sans-serif" font-size="10">Replace with your project screenshot</text>
+                </svg>
+                <span class="media-badge">[Project 03]</span>
+              </div>
+            </div>
+
+            <div class="project-body">
+              <div class="project-meta-row">
+                <span class="project-category">[Category: Creative Design &amp; UI]</span>
+                <span class="project-year">[2026]</span>
+              </div>
+
+              <h3 class="project-title">[Project Title: Art-Directed Digital Portfolio]</h3>
+
+              <p class="project-description">
+                [Add project details: Detail your design thinking process, moodboards, color palette selection, accessibility considerations, and the resulting user feedback.]
+              </p>
+
+              <div class="project-tags">
+                <span class="p-tag">[UI/UX Design]</span>
+                <span class="p-tag">[Design System]</span>
+                <span class="p-tag">[Prototyping]</span>
+              </div>
+
+              <div class="project-actions">
+                <a href="#projects" class="bamboo-btn bamboo-btn-sm" aria-label="Explore Project 3 Case Study Placeholder">
+                  <span class="bamboo-btn-wood">
+                    <span class="bamboo-btn-text">[Case Study]</span>
+                    <span class="bamboo-btn-slash" aria-hidden="true"></span>
+                  </span>
+                </a>
+                <a href="#projects" class="bamboo-btn bamboo-btn-secondary bamboo-btn-sm" aria-label="View Project 3 Assets Placeholder">
+                  <span class="bamboo-btn-wood">
+                    <span class="bamboo-btn-text">[View Assets]</span>
+                    <span class="bamboo-btn-slash" aria-hidden="true"></span>
+                  </span>
+                </a>
+              </div>
+            </div>
+          </article>
+
+        </div>
+
+      </div>
+    </section>
+
+
+    <!-- ─────────────────────────────────────────────────────────────
+         SECTION 5: CONTACT SECTION
+         Peaceful closing garden pavilion with editable contact details
+         and an accessible interactive inquiry form.
+         ───────────────────────────────────────────────────────────── -->
+    <section id="contact" class="section section-contact" aria-labelledby="contact-heading">
+      <div class="section-container">
+        
+        <div class="section-title-wrapper">
+          <div class="title-emblem" aria-hidden="true">
+            <span class="title-line"></span>
+            <span class="title-kanji-seal">和</span>
+            <span class="title-line"></span>
+          </div>
+          <h2 id="contact-heading" class="section-heading">Get in Touch</h2>
+          <p class="section-kicker">Send a Note Across the Garden Path</p>
+        </div>
+
+        <div class="contact-card-grid">
+          
+          <!-- Contact Left: Direct Channels & Social Links (Placeholders) -->
+          <div class="contact-info-panel">
+            <h3 class="contact-subhead">Let's Connect</h3>
+            <p class="contact-message">
+              I am always eager to learn, exchange thoughts, collaborate on exciting creative ideas, and explore new opportunities.
+            </p>
+
+            <div class="contact-channels">
+              
+              <!-- Email Placeholder -->
+              <div class="channel-card">
+                <div class="channel-icon" aria-hidden="true">
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+                    <polyline points="22,6 12,13 2,6"></polyline>
+                  </svg>
+                </div>
+                <div class="channel-details">
+                  <span class="channel-title">Direct Email</span>
+                  <a href="mailto:[your.email@example.com]" class="channel-link">[your.email@example.com]</a>
+                </div>
+              </div>
+
+              <!-- Location Placeholder -->
+              <div class="channel-card">
+                <div class="channel-icon" aria-hidden="true">
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+                    <circle cx="12" cy="10" r="3"></circle>
+                  </svg>
+                </div>
+                <div class="channel-details">
+                  <span class="channel-title">Location</span>
+                  <span class="channel-text">[Add your City / Region]</span>
+                </div>
+              </div>
+
+              <!-- Profiles & Socials -->
+              <div class="social-links-box">
+                <span class="social-heading">External Profiles &amp; Repositories:</span>
+                <ul class="social-list">
+                  <li>
+                    <a href="#contact" class="social-tag-link" aria-label="GitHub Profile Placeholder">
+                      <span class="tag-bullet">✦</span>
+                      <span>[GitHub Profile]</span>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="#contact" class="social-tag-link" aria-label="LinkedIn Profile Placeholder">
+                      <span class="tag-bullet">✦</span>
+                      <span>[LinkedIn Profile]</span>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="#contact" class="social-tag-link" aria-label="Twitter / X Profile Placeholder">
+                      <span class="tag-bullet">✦</span>
+                      <span>[Twitter / X]</span>
+                    </a>
+                  </li>
+                </ul>
+              </div>
+
+            </div>
+          </div>
+
+          <!-- Contact Right: Interactive Message Form -->
+          <div class="contact-form-panel">
+            <h3 class="contact-subhead">Leave a Message</h3>
+            
+            <form id="garden-contact-form" class="garden-contact-form" action="#" method="POST" novalidate>
+              
+              <div class="form-group">
+                <label for="form-name" class="form-label">Your Name <span class="required" aria-hidden="true">*</span></label>
+                <input type="text" id="form-name" name="name" class="form-input" placeholder="e.g. Kenji Tanaka" required autocomplete="name" />
+                <span class="field-error-msg" id="name-error" aria-live="polite"></span>
+              </div>
+
+              <div class="form-group">
+                <label for="form-email" class="form-label">Your Email <span class="required" aria-hidden="true">*</span></label>
+                <input type="email" id="form-email" name="email" class="form-input" placeholder="e.g. name@example.com" required autocomplete="email" />
+                <span class="field-error-msg" id="email-error" aria-live="polite"></span>
+              </div>
+
+              <div class="form-group">
+                <label for="form-message" class="form-label">Your Message <span class="required" aria-hidden="true">*</span></label>
+                <textarea id="form-message" name="message" class="form-textarea" rows="4" placeholder="Write your thought, proposal, or inquiry here..." required></textarea>
+                <span class="field-error-msg" id="message-error" aria-live="polite"></span>
+              </div>
+
+              <button type="submit" id="submit-contact-btn" class="bamboo-btn bamboo-btn-primary form-submit-btn">
+                <span class="bamboo-btn-wood">
+                  <span class="bamboo-btn-node bamboo-node-left"></span>
+                  <span class="bamboo-btn-text">Send Message</span>
+                  <span class="bamboo-btn-slash" aria-hidden="true"></span>
+                  <span class="bamboo-btn-node bamboo-node-right"></span>
+                </span>
+              </button>
+
+              <div id="form-status-msg" class="form-status-msg" role="status" aria-live="polite"></div>
+
+            </form>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+  </main>
+
+
+  <!-- ═════════════════════════════════════════════════════════════════
+       5. SITE FOOTER
+       Unobtrusive, elegant closing with torii emblem & copyright.
+       ═════════════════════════════════════════════════════════════════ -->
+  <footer class="site-footer">
+    <div class="footer-container">
+      
+      <!-- Torii & Sakura Emblem -->
+      <div class="footer-torii-emblem" aria-hidden="true">
+        <svg width="48" height="40" viewBox="0 0 100 80" fill="none">
+          <!-- Torii Top Beam / Kasagi -->
+          <path d="M5 24 Q50 14 95 24 L92 28 Q50 20 8 28 Z" fill="#8f1d22"/>
+          <!-- Sub-beam / Shimaki -->
+          <rect x="18" y="32" width="64" height="5" fill="#3d2b1f"/>
+          <!-- Pillars / Hashira -->
+          <line x1="28" y1="28" x2="26" y2="76" stroke="#8f1d22" stroke-width="6"/>
+          <line x1="72" y1="28" x2="74" y2="76" stroke="#8f1d22" stroke-width="6"/>
+          <!-- Central Tablet / Gakuzuka -->
+          <rect x="47" y="22" width="6" height="12" fill="#c5a059"/>
+        </svg>
+      </div>
+
+      <p class="footer-name">Lavish Fargose</p>
+      <p class="footer-age-note">Age 18 &nbsp;·&nbsp; Spring Dusk Japanese Garden Experience</p>
+
+      <div class="footer-links">
+        <a href="#hero">Return to Top ↑</a>
+        <span class="separator">·</span>
+        <button type="button" id="footer-replay-btn" class="footer-text-btn">Replay Gate Intro</button>
+      </div>
+
+      <p class="footer-copyright">
+        &copy; <span id="current-year">2026</span> Lavish Fargose. All rights reserved.
+      </p>
+
+    </div>
+  </footer>
+
+
+  <!-- ═════════════════════════════════════════════════════════════════
+       6. BACK TO TOP FLOATING BUTTON
+       Appears gently when the user scrolls down through the garden.
+       ═════════════════════════════════════════════════════════════════ -->
+  <a href="#hero" id="back-to-top-btn" class="back-to-top-btn" aria-label="Back to top of page">
+    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+      <path d="M18 15l-6-6-6 6"/>
+    </svg>
+  </a>
+
+
+  <!-- ═════════════════════════════════════════════════════════════════
+       7. KATANA INTERACTION EFFECTS (Desktop Pointer Only)
+       Katana follower and slash line animation overlay.
+       ═════════════════════════════════════════════════════════════════ -->
+  <div id="katana-follower" class="katana-follower" aria-hidden="true"></div>
+  <div id="katana-slash-container" class="katana-slash-container" aria-hidden="true"></div>
+
+
+  <!-- Main JavaScript File -->
+  <script src="script.js"></script>
+</body>
 </html>
